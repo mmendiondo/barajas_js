@@ -1,8 +1,19 @@
 _mazo = new mazo();
 
 $(document).ready(function(){
-	var _mazo_element = _mazo.element("mazo", _mazo);
-	$("body").prepend($(_mazo_element));
+
+	//testing classes to be shown in the screen
+		var _mazo_element = _mazo.element("mazo", _mazo); //delete
+		_mazo_element.html("este va a ser el mazo por ejemplo"); //delete
+		$("body").prepend($(_mazo_element)); //delete
+
+		var _carta = new carta();
+		var _carta_element = _carta.element("carta", _carta); //delete
+		_carta_element.html("este va a ser una carta por ejemplo"); //delete
+		$("body").prepend($(_carta_element).clone()); //delete
+		$("body").prepend($(_carta_element).clone().css("left", 400)); //delete
+		$("body").prepend($(_carta_element).clone().css("left", 600)); //delete
+	//testing classes to be shown in the screen
 
 	new_game();	
 });
